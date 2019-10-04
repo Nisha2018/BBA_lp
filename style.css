@@ -1,0 +1,535 @@
+.grid-m {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.header,.scope,.head,
+.scope .content .text,.logistics,
+.logistics .content .industry,
+.content .become,.become .list,
+.placement .content,.campus .content,
+.campus .content .image,.why .content,
+.campus,.form-area{
+	grid-template-rows: auto auto;
+}
+
+.form-area .form form{
+	grid-template-rows: repeat(6,auto);
+	grid-row-gap: 1rem;
+}
+
+.header .info,.info .phone,
+.info .mail{
+	grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    justify-content: center;
+    grid-column-gap: 4rem;
+    align-items: center;
+}
+
+.header .info{
+	grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-row-gap: 0.5rem;
+}
+
+.head .line,.placement .labels{
+	grid-template-columns: auto auto auto;
+	grid-template-rows: auto;
+}
+
+.scope .content,.details .row,
+.placement .tab-content .tab{
+	grid-template-rows: auto auto auto;
+}
+
+.logistics .content{
+	grid-template-rows: repeat(4,auto);
+	grid-row-gap: 2rem;
+}
+
+.placement .labels{
+	justify-content: center;
+	grid-column-gap: 1rem;
+}
+
+.footer{
+	grid-template-rows: auto;
+	background: #333;
+    color: #fff;
+    font-size: 14px;
+    padding: 1rem;
+}
+
+/*slider*/
+.tab1,.tab2,.tab3{
+	display: none;
+}
+
+.header{
+	grid-row-gap: 1rem;
+}
+
+.details .icon{
+	justify-self: center;
+}
+
+.details .title{
+	text-align: center;
+}
+
+
+@keyframes slide{
+	0%{
+		transform: translateX(1600px);
+	}
+
+	100%{
+		transform: translateX(0);
+	}
+}
+
+/*.tab-content .tab2{
+	transition: transform 1.5s;
+    transform: rotateY(90deg);
+    transform-origin: left;
+}*/
+
+#toggle1:checked ~ .tab-content .tab1,
+#toggle2:checked ~ .tab-content .tab2,
+#toggle3:checked ~ .tab-content .tab3{
+	display: grid;
+	animation: slide 1.5s ease-in-out;
+	/*transition: transform 1.5s;
+	transform: rotateY(0deg);
+	transform-origin: right;*/
+}
+
+#toggle1:checked ~ .labels label[for="toggle1"],
+#toggle2:checked ~ .labels label[for="toggle2"],
+#toggle3:checked ~ .labels label[for="toggle3"]{
+	background-color: #ffffff;
+}
+
+.labels label:hover{
+	background-color: #ffffff;
+}
+
+/*ends*/
+
+/*styling*/
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    font-family: "Lato", "Serif";
+}
+
+.font{
+	font-family: "Lato", "Serif";
+}
+
+.p-all {
+    padding: 3rem 2rem;
+}
+
+@media screen and (min-width: 800px) {
+    .p-all {
+        padding: 5rem 10rem;
+    }
+}
+
+.img {
+    width: 100%;
+    height: auto;
+}
+
+.color-red {
+    color: #cb2d0d;
+}
+
+.bg-red{
+	background-color: #cb2d0d;
+}
+
+.bg-white{
+	background-color: #ffffff;
+}
+
+.bg-blue{
+	background: #0058A6;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+.font-20 {
+    font-size: 20px;
+}
+
+.font-18 {
+    font-size: 18px;
+}
+
+.font-14 {
+    font-size: 14px;
+}
+
+.font-13 {
+    font-size: 13px;
+}
+
+.font-24 {
+    font-size: 24px;
+}
+
+.center {
+    text-align: center;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button {
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    padding: 1.5rem 2rem;
+    cursor: pointer;
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+header .logo{
+	justify-self: center;
+}
+
+.info .phone,.info .mail{
+	grid-column-gap: 0.5rem;
+	color: #777777;
+	font-weight: 550;
+}
+
+.info .icon i{
+	font-size: 18px;
+	vertical-align: middle;
+	font-weight: bold;
+}
+
+.phone .icon{
+	align-self: start;
+}
+
+.info .number,.mail .id{
+	font-size: 12px;
+}
+
+.info .number {
+    grid-template-columns: 1fr;
+    align-items: start;
+    justify-items: start;
+}
+
+.info{
+	font-family: Lato,Serif;
+}
+
+.bang{
+	justify-self: start;
+}
+
+header{
+	padding: 1rem 0;
+}
+
+.banner img,.image img{
+    vertical-align: bottom;
+}
+
+.scope,.placement{
+	color: #ffffff;
+	grid-row-gap: 5rem;
+}
+
+.head .line{
+	align-items: center;
+    justify-content: center;
+    grid-column-gap: 1rem;
+}
+
+.line .star{
+	align-self: center;
+    display: grid;
+}
+
+.star i{
+	font-size: 3rem;
+}
+
+.head .line .line1,
+.head .line .line2{
+	/*background-color: #fff;*/
+    width: 130px;
+    height: 2px;
+}
+
+.head .title{
+	font-size: 23px;
+	font-family: 'Roboto', sans-serif;
+}
+
+.scope .text .big,
+.scope .text .small{
+	font-size: 28px;
+    font-weight: 600;
+    font-family: Lato,serif;
+}
+
+.scope .text .small{
+	font-size: 16px;
+    font-weight: 800;
+}
+
+.scope .content,.campus,.campus .content{
+	grid-row-gap: 3rem;
+}
+
+.content .title{
+	font-size: 2rem;
+	font-weight: 500;
+}
+
+ul{
+	list-style-type: disc;
+	padding-left: 3rem;
+}
+
+.list{
+	line-height: 28px;
+}
+
+.logistics .icon img{
+	width: 50px;
+    height: auto;
+}
+
+.logistics,
+.placement .content,.why,.hire{
+	grid-row-gap: 3rem;
+}
+
+.placement .labels label{
+	width: 14px;
+    height: 14px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.placement .tab-content .tab,
+.why .content{
+	grid-row-gap: 1rem;
+}
+
+.why{
+	background: #f5f5f5;
+}
+
+.form-area .form .form-style {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #d2cfcf;
+    font-size: 13px;
+}
+
+.form-area{
+	background: rgba(0, 0, 0, 1);
+    color: #ffffff;
+    position: fixed;
+    right: 4rem;
+     padding: 0 2rem 2rem 2rem;
+    border-radius: 6px;
+    grid-row-gap: 2rem;
+    z-index: 11;
+    transition: all 0.5s ease-out;
+}
+
+.form-area .form-text{
+	grid-row-gap: 1rem;
+}
+
+.form-text .form-title{
+	font-family: Roboto,sans-serif;
+}
+
+input[type="checkbox"]{
+	display: none;
+}
+
+#close:not(:checked) ~ .form-area{
+	opacity: 1;
+	visibility: visible;
+}
+
+#close:checked ~ .form-area{
+	opacity: 0;
+	visibility: hidden;
+}
+
+ .button label[for="close"]{
+	background-color: #3eb0f7;
+    padding: 8px 10px;
+    color: #fff;
+    border-radius: 4px;
+    position: fixed;
+    font-size: 16px;
+    right: 0rem;
+    top: 0rem;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+}
+
+.button label[for="close"]:hover{
+	background-color: #1a6b9d;
+}
+
+.closebtn label[for="close"]{
+	background-color: #3eb0f7;
+    border-radius: 100%;
+    color: #fff;
+    height: 40px;
+    width: 40px;
+    font-size: 40px;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    position: absolute;
+    right: -1rem;
+    top: -1rem;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+}
+
+.closebtn label[for="close"]:hover{
+	color: #000;
+}
+
+.close a{
+	color: #fff;
+}
+
+input::placeholder{
+	color: #c4bfbf;
+}
+
+.form-area form button{
+	background-color: #3eb0f7;
+    color: #fff;
+    width: 100%;
+    border-radius: 0;
+    font-size: 16px;
+    padding: 1.2rem;
+    transition: all 0.5s ease-out;
+}
+
+.form-area form button:hover{
+	background-color: #1a6b9d;
+}
+
+.form-text .register{
+	font-size: 13px;
+}
+
+
+@media screen and (min-width: 992px){
+	.header{
+		grid-template-columns: 1fr 5fr 1fr;
+		grid-template-rows: auto;
+	}
+
+	.header .info,.info .phone,
+.info .mail{
+	grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+	.scope .content{
+	grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+	}
+
+	.head .title{
+	font-size: 35px;
+	}
+
+	.campus .content .image{
+		grid-template-columns: 1fr 1fr;
+		grid-column-gap: 2rem;
+	}
+
+	.become .list{
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: auto;
+	}
+
+	.details .row{
+		align-content: start;
+		grid-row-gap: 0.5rem;
+	}
+
+	.details .list{
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto;
+	}
+
+	.content .become{
+		grid-row-gap: 1rem;
+	}
+
+	.info .number{
+	grid-template-columns: 2fr 2fr 2fr;
+    align-items: center;
+    justify-items: center;
+}
+
+.details .icon{
+	justify-self: start;
+}
+
+.details .title{
+	text-align: left;
+}
+
+.form-area{
+	width: 22%;
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
